@@ -1,0 +1,1 @@
+Just a bunch of common helper things to save a bit of time.
