@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div id="pusher_debug"></div> 
+  
+  <script src="http://js.pusher.com/1.12/pusher.js"></script>
+  <script>
+    var pusher = new Pusher("e66850891b748754e495"); 
+    pusher.connection.bind( 'error', function( err ) { 
+      if( err.data.code === 4004 ) {
+        Pusher.log('>>> detected limit error');
+      }
+    });
+  </script>
+  <script src="../helper.js" data-log></script>
+</body>
+</html>
